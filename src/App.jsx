@@ -54,7 +54,6 @@ export default function App() {
               <Youtube className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
               <Twitter className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
             </div>
-            <User className="w-[18px] h-[18px] cursor-pointer hover:text-white/80 transition-colors" />
             <div className="relative cursor-pointer hover:text-white/80 transition-colors">
               <ShoppingBag className="w-[18px] h-[18px]" />
               <span className="absolute -top-2 -right-2 w-4 h-4 bg-white text-black text-[10px] font-bold flex items-center justify-center rounded-full">0</span>
