@@ -1,19 +1,17 @@
 import { 
-  ShoppingBag, 
   Search, 
   User, 
-  ShoppingCart, 
+  ShoppingBag,
   CreditCard, 
   Truck, 
   Package, 
   Heart, 
-  Quote, 
-  Globe, 
-  Mail, 
-  Share2,
-  ChevronRight
+  Quote,
+  Facebook,
+  Instagram,
+  Youtube,
+  Twitter
 } from 'lucide-react';
-import { motion } from 'motion/react';
 import zafraLogo from '../zafra_white-removebg-preview.png';
 
 const HERO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuAl4MSYRiwt1BqMt8Ou7HFLU_XJZSszvs92yso_XjsFHvSOtVWeskpfafj0HvNaW6Lcw0EilTT4xQXuEeUCNdCJzbHzMrA7sNhf4C9Q8sPD1hZwtqre7V3uc49R5JfEW1UiMjazU5gbkElFdQ8Cqjpbtr3zqDcuJjY1SiEqLDHv6lPazRMKDMsDpCo2dDqUMrPsFwzH79699nfipnuuHI6tWhO9iaZbsy6NtYkYgbtGhep1mABYDAxNXXSk8Gy_OUFeRKhnYoQJ0ho";
@@ -25,58 +23,48 @@ const HERITAGE_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuBcVN
 const PROD_TURMERIC = "https://lh3.googleusercontent.com/aida-public/AB6AXuDPtiu6FRBHdIZoqvvpVyKUSrj7jw63v4o5jG18ETzJzhm-2LFqV7KbdtPNn9k75_SBkpf_gvEIFPVYGmoTg123Iaq0Htd-AXr_YVlLbZZzhi-aUH1b5pVtqbtnOkmBOWj2o8JIdVNetNAiWVrEJX8L_Q2htZrLacqV0sHOMfWB0ctTfx-1fzZZyg-iHbIgX3qG6fEzqHL8PHchI4qyrYlwEBeqYrq2rOvpHcD0jCywCJE-qBOK7yA7MVsT63nocRP_d7hTGh68Sho";
 const PROD_CARDAMOM = "https://lh3.googleusercontent.com/aida-public/AB6AXuDzsS2mEW66vr63VMJ-_uSfrUgx1-7WK2x6F8sFIdYCN1QUULEoCMwKnJw08LRUuKpOFnByaJ34GhesOkO-QF6TcInF7ZBFWVKisnqJYfmTJ0v2XZyLHWwuQq7UDB-Epuxl_VHLF5Rb6HN8i6QntTbpo9eyLOSYrmB15P9Px2-VcirPJwcyZMhdKPair31k17YKWuDHaOUL3WOVQbhjq_Wiy_gKgBYUjQ9GqC8ugVoZbf_TOK3MlXQYFGg7JB828n3gXgZXlZKEeBs";
 const PROD_HARISSA = "https://lh3.googleusercontent.com/aida-public/AB6AXuAcgJCVQH1755ch7sqXmYSF_9VrZUz65iyEMQ9Fc4KKLOXuFIDKupsQajfBRU32VEBoJvqelVfrIT92S9OsFjd-oWrbsfT1-uETURVxpuMzTPlI6ky-F3eMlkHwA8d365HNof0YejH2vlDWvl2oiVXeEoyI6-1Wu3vugLFfKz2ZdJgS_XwtqoWQ5jLAMewRG006tL9C0CWrjDoZOQ1xYjySSpWL47MWSUC7lt7XgEdyyPoslshrAyiBJpIAPegRfhztXuUB1xgQ2R4";
-const FINAL_CTA_BG = "https://lh3.googleusercontent.com/aida-public/AB6AXuA_ymgRUkZqu3yTH-7h6lVLGlHuuZXYzzMxeyV2ujrPtUNkOtj1gnKFhsn8RYQAOK3icS_phmVXNzhPPICsudUSMJO1YkAi7EEG0PehXGipZTvXpu4v_eBpfoW7Pn0-pP0x63Wel7r5GQNkx3u4jKAgt6bItChwr3BQZqY_m7Rks_6Vv-knae-swL3YEVq9vlyXvUMjyDn75y8mfW8Qgo2kp2WYeyRJ3AGoXYQpnftd5FppcAqgRsq0VnzOEF9FKEGwl7YniDbgGuY";
 const LOGO_URL = "https://aspcoaiqyomzrmivivth.supabase.co/storage/v1/object/public/logo/zafralogo.png";
 
 export default function App() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   return (
-    <div className="min-h-screen bg-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+    <div className="min-h-screen bg-white font-sans text-[#1b1c1c] selection:bg-[#c8952a] selection:text-white overflow-x-hidden">
       {/* Navbar */}
       <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
-        <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3 group">
-            <img src={zafraLogo} alt="Zafra Marrakech" className="h-28 md:h-32 w-auto transition-transform group-hover:scale-105" />
+        <div className="max-w-[1400px] mx-auto px-6 h-24 flex items-center justify-between">
+          <a href="/" className="flex items-center">
+            <img src={zafraLogo} alt="Zafra Marrakech" className="h-14 w-auto" />
           </a>
           
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {['Home', 'Shop', 'About', 'Contact'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
-                className="text-sm font-semibold uppercase tracking-[0.1em] text-white/90 hover:text-white transition-colors"
+                className="text-[13px] font-semibold text-white hover:text-white/80 transition-colors tracking-wide"
               >
                 {item}
               </a>
             ))}
           </div>
 
-          <div className="flex items-center gap-6 text-white">
-            <button className="p-2 hover:bg-white/10 rounded-full transition-colors">
-              <Search className="w-5 h-5" />
-            </button>
-            <button className="p-2 hover:bg-white/10 rounded-full transition-colors">
-              <User className="w-5 h-5" />
-            </button>
-            <button className="p-2 hover:bg-white/10 rounded-full transition-colors relative">
-              <ShoppingBag className="w-5 h-5" />
-              <span className="absolute top-0 right-0 w-4 h-4 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full">0</span>
-            </button>
+          <div className="flex items-center gap-5 text-white">
+            <div className="hidden lg:flex items-center gap-5 mr-2">
+              <Facebook className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
+              <Instagram className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
+              <Youtube className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
+              <Twitter className="w-4 h-4 cursor-pointer hover:text-white/80 transition-colors" />
+            </div>
+            <User className="w-[18px] h-[18px] cursor-pointer hover:text-white/80 transition-colors" />
+            <div className="relative cursor-pointer hover:text-white/80 transition-colors">
+              <ShoppingBag className="w-[18px] h-[18px]" />
+              <span className="absolute -top-2 -right-2 w-4 h-4 bg-white text-black text-[10px] font-bold flex items-center justify-center rounded-full">0</span>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <header className="relative h-screen flex items-center justify-center overflow-hidden">
+      <header className="relative h-screen min-h-[600px] flex items-center justify-center">
         <img 
           src={HERO_IMAGE} 
           alt="Moroccan Spices" 
@@ -85,81 +73,63 @@ export default function App() {
         />
         <div className="absolute inset-0 bg-black/40" />
         
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="relative z-10 text-center px-6 max-w-4xl pt-24"
-        >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6 block">WELCOME TO ZAFRA MARRAKECH</span>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] text-white mb-10">
-            Discover the Soul of the Medina in Every Pinch
+        <div className="relative z-10 text-center px-6 max-w-4xl mt-16">
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-white/90 mb-5 block">
+            WELCOME TO ZAFRA MARRAKECH
+          </span>
+          <h1 className="text-4xl md:text-6xl lg:text-[64px] font-semibold leading-[1.15] text-white mb-8">
+            Discover the Soul of<br/>the Medina in Every Pinch
           </h1>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-primary hover:bg-primary-container text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-[0.1em] transition-all"
-          >
+          <button className="bg-[#7c5800] hover:bg-[#c8952a] text-white px-8 py-3.5 rounded-full text-[13px] font-semibold transition-all">
             Shop Now
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </header>
 
-      {/* Features Bar */}
-      <section className="bg-white py-16 border-b border-outline-variant/30">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Features */}
+      <section className="bg-white py-16 border-b border-gray-100">
+        <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: CreditCard, title: "Secure Payment", desc: "100% Encrypted transactions" },
             { icon: Truck, title: "Free Shipping", desc: "On orders over $75" },
             { icon: Package, title: "Delivered with Care", desc: "Hand-packed for purity" },
             { icon: Heart, title: "Ethically Sourced", desc: "Direct from local farmers" },
           ].map((feature, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex flex-col items-center text-center gap-4"
-            >
-              <feature.icon className="w-8 h-8 text-on-surface mb-2" strokeWidth={1.5} />
+            <div key={i} className="flex flex-col items-center text-center gap-3">
+              <feature.icon className="w-[26px] h-[26px] text-[#1b1c1c]" strokeWidth={1.5} />
               <div>
-                <h3 className="font-bold text-sm text-on-surface mb-1">{feature.title}</h3>
-                <p className="text-xs text-on-surface-variant">{feature.desc}</p>
+                <h3 className="font-semibold text-[13px] text-[#1b1c1c]">{feature.title}</h3>
+                <p className="text-[12px] text-[#4f4536] mt-1">{feature.desc}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Trending Products */}
-      <section className="pt-24 pb-12 px-6 max-w-7xl mx-auto text-center" id="shop">
-        <h2 className="text-[32px] font-semibold leading-[1.2] text-on-surface">Trending Products</h2>
+      {/* Trending Products & Banner */}
+      <section className="pt-20 pb-10 text-center bg-white">
+        <h2 className="text-[26px] font-semibold text-[#1b1c1c]">Trending Products</h2>
       </section>
 
-      {/* Flash Sale Banner */}
-      <section className="relative h-[400px] overflow-hidden flex items-center justify-center">
+      <section className="relative h-[400px] w-full overflow-hidden">
         <img src={PROD_DISCOVERY} alt="Flash Sale" className="absolute inset-0 w-full h-full object-cover" referrerPolicy="no-referrer" />
         <div className="absolute inset-0 bg-black/60" />
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10 text-center px-6 text-white"
-        >
-          <h2 className="text-4xl md:text-5xl font-semibold leading-[1.2] mb-4">Flash Sale: Up to 50% Off<br />On Select Items!</h2>
-          <p className="text-lg text-stone-200 max-w-xl mx-auto mb-8 opacity-90">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 text-white">
+          <h2 className="text-3xl md:text-[40px] font-semibold leading-[1.2] mb-4">
+            Flash Sale: Up to 50% Off<br />On Select Items!
+          </h2>
+          <p className="text-[15px] text-white/90 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
             Don't miss out on our flash sale event! For a limited time, enjoy up to 50% off on a selection of our best-selling artisanal spices.
           </p>
-          <button className="border border-white text-white px-10 py-3 rounded-full text-sm font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all">
+          <button className="border border-white text-white px-8 py-3.5 rounded-full text-[13px] font-semibold hover:bg-white hover:text-black transition-all">
             Shop Now
           </button>
-        </motion.div>
+        </div>
       </section>
 
       {/* Categories */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <h2 className="text-[32px] font-semibold leading-[1.2] text-center mb-16 text-on-surface">Our Categories</h2>
+      <section className="py-24 px-6 max-w-[1200px] mx-auto bg-white">
+        <h2 className="text-[26px] font-semibold text-center mb-16 text-[#1b1c1c]">Our Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { name: "Whole Spices", img: PROD_DISCOVERY },
@@ -167,199 +137,119 @@ export default function App() {
             { name: "Signature Blends", img: PROD_BAKER },
             { name: "Ceramic Gift Sets", img: PROD_TAGINE },
           ].map((cat, i) => (
-            <motion.a 
-              key={i}
-              href="#"
-              whileHover={{ y: -10 }}
-              className="text-center group flex flex-col items-center"
-            >
-              <div className="aspect-square w-full max-w-[200px] mb-6 relative overflow-hidden">
-                <img src={cat.img} alt={cat.name} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+            <a key={i} href="#" className="text-center group flex flex-col items-center">
+              <div className="w-full aspect-square mb-6 relative flex items-center justify-center p-4">
+                <img src={cat.img} alt={cat.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105" referrerPolicy="no-referrer" />
               </div>
-              <h3 className="font-bold text-sm text-on-surface uppercase tracking-widest">{cat.name}</h3>
-            </motion.a>
+              <h3 className="font-medium text-[15px] text-[#1b1c1c]">{cat.name}</h3>
+            </a>
           ))}
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="bg-[#E9F2E6] py-24" id="about">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <img src={HERITAGE_IMAGE} alt="Artisan Market" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col justify-center"
-          >
-            <h2 className="text-[48px] font-bold leading-[1.1] text-on-surface mb-6">Your Premier Destination for Authentic Flavors.</h2>
-            <p className="text-lg text-on-surface-variant mb-12">
-              At Zafra Marrakech, we believe in the transformative power of quality spices. Whether you're a professional chef or a home cook, our curated selection of organic, hand-sorted botanical treasures will inspire and enrich your culinary journey.
-            </p>
-            <div className="flex gap-16">
-              <div>
-                <p className="text-[32px] font-semibold leading-[1.2] text-on-surface mb-1">500K+</p>
-                <p className="text-on-surface-variant text-sm font-medium">Spice Enthusiasts</p>
-              </div>
-              <div>
-                <p className="text-[32px] font-semibold leading-[1.2] text-on-surface mb-1">10.5K</p>
-                <p className="text-on-surface-variant text-sm font-medium">Orders Delivered</p>
+      {/* Split About Section */}
+      <section className="bg-[#E9F2E6] w-full">
+        <div className="max-w-[1200px] mx-auto px-6 py-20 lg:py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="w-full aspect-[4/3] relative overflow-hidden">
+              <img src={HERITAGE_IMAGE} alt="Artisan Market" className="absolute inset-0 w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h2 className="text-3xl md:text-[34px] font-semibold leading-[1.25] text-[#1b1c1c] mb-6">
+                Your Premier<br />Destination for All<br />Flavors.
+              </h2>
+              <p className="text-[14px] text-[#4f4536] mb-10 leading-relaxed max-w-md">
+                At Zafra Marrakech, we believe in the transformative power of quality spices. Whether you're a professional chef or just starting your culinary journey, our curated selection of botanical treasures will inspire and enrich your cooking.
+              </p>
+              <div className="flex gap-16 border-t border-[#1b1c1c]/10 pt-8">
+                <div>
+                  <p className="text-[26px] font-semibold text-[#1b1c1c] mb-1">98%</p>
+                  <p className="text-[12px] text-[#4f4536]">Customer Satisfaction</p>
+                </div>
+                <div>
+                  <p className="text-[26px] font-semibold text-[#1b1c1c] mb-1">103K</p>
+                  <p className="text-[12px] text-[#4f4536]">Orders Delivered</p>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Popular Products */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <h2 className="text-[32px] font-semibold leading-[1.2] text-center mb-16 text-on-surface">Popular Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="py-24 px-6 max-w-[1200px] mx-auto bg-white">
+        <h2 className="text-[26px] font-semibold text-center mb-16 text-[#1b1c1c]">Popular Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { name: "Organic Turmeric", category: "Ground Root", price: "14.00", img: PROD_TURMERIC },
-            { name: "Green Cardamom Pods", category: "Whole Pods", price: "16.00", img: PROD_CARDAMOM },
+            { name: "Green Cardamom", category: "Whole Pods", price: "16.00", img: PROD_CARDAMOM },
             { name: "Rose Harissa", category: "Artisan Paste", price: "15.00", img: PROD_HARISSA },
+            { name: "Ras el Hanout", category: "Signature Blend", price: "18.00", img: PROD_BAKER },
           ].map((prod, i) => (
-            <motion.div 
-              key={i} 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group cursor-pointer"
-            >
-              <div className="aspect-[4/5] bg-surface-container overflow-hidden mb-6 relative">
-                <img src={prod.img} alt={prod.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+            <div key={i} className="group cursor-pointer">
+              <div className="bg-[#f9f9f9] aspect-square mb-5 flex items-center justify-center p-8">
+                <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105" referrerPolicy="no-referrer" />
               </div>
-              <h3 className="font-bold text-lg text-on-surface mb-1">{prod.name}</h3>
-              <p className="text-sm text-on-surface-variant mb-2">{prod.category}</p>
-              <p className="text-lg font-bold text-on-surface">${prod.price}</p>
-            </motion.div>
+              <h3 className="font-semibold text-[14px] text-[#1b1c1c] mb-1">{prod.name}</h3>
+              <p className="text-[13px] text-[#4f4536] mb-2">{prod.category}</p>
+              <p className="text-[14px] font-semibold text-[#1b1c1c]">${prod.price}</p>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-[#E9F2E6] py-24 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column */}
-          <div className="flex flex-col gap-10">
-            <div>
-              <h2 className="text-[48px] font-bold leading-[1.1] mb-4 text-on-surface">What Our Customers Say</h2>
-              <p className="text-lg text-on-surface-variant">
-                Discover the reasons why people love us and become your go-to partner.
-              </p>
-            </div>
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white p-10 rounded-2xl flex flex-col gap-6"
-            >
-              <Quote className="w-8 h-8 text-primary" fill="currentColor" />
-              <p className="text-lg text-on-surface leading-relaxed">
-                "The quality of the Saffron I received is simply unparalleled. It has transformed my cooking completely. The delivery was prompt and the packaging is beautiful. Highly recommend them."
-              </p>
-              <div className="flex items-center gap-4 mt-2">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" alt="Marcus Reed" className="w-12 h-12 rounded-full object-cover" />
-                <div>
-                  <p className="font-bold text-sm text-on-surface">Marcus Reed</p>
+      <section className="bg-[#E9F2E6] w-full">
+        <div className="max-w-[1200px] mx-auto px-6 py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+            {/* Left Column */}
+            <div className="flex flex-col gap-10">
+              <div className="max-w-md">
+                <h2 className="text-3xl md:text-[34px] font-semibold leading-[1.25] mb-4 text-[#1b1c1c]">
+                  What Our Customers Say
+                </h2>
+                <p className="text-[14px] text-[#4f4536]">
+                  Discover the reasons why people love us and become your go-to partner.
+                </p>
+              </div>
+              <div className="bg-white p-10 flex flex-col gap-6 shadow-sm">
+                <Quote className="w-6 h-6 text-[#c8952a]" fill="currentColor" />
+                <p className="text-[14px] text-[#4f4536] leading-relaxed">
+                  "The quality of the Saffron I received is simply unparalleled. It has transformed my cooking completely. The delivery was prompt and the packaging is beautiful. Highly recommend them."
+                </p>
+                <div className="mt-2">
+                  <p className="font-semibold text-[14px] text-[#1b1c1c]">Marcus Reed</p>
+                  <p className="text-[12px] text-[#4f4536] mt-0.5">Home Chef</p>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
 
-          {/* Right Column */}
-          <div className="flex flex-col gap-8">
-            {[
-              { 
-                name: "Elena Vance", 
-                text: "I am absolutely thrilled with the service I received from their company! They were attentive, responsive, and genuinely cared about meeting my needs. Highly recommend them.",
-                img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100"
-              },
-              { 
-                name: "Sophia Chen", 
-                text: "Their team exceeded our expectations. Their creative approach and attention to detail brought our kitchen vision to life. Highly recommended!",
-                img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100"
-              }
-            ].map((test, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="bg-white p-10 rounded-2xl flex flex-col gap-6"
-              >
-                <Quote className="w-8 h-8 text-primary opacity-50" fill="currentColor" />
-                <p className="text-lg text-on-surface/80">{test.text}</p>
-                <div className="flex items-center gap-4 mt-2">
-                  <img src={test.img} alt={test.name} className="w-12 h-12 rounded-full object-cover" />
-                  <div>
-                    <p className="font-bold text-sm text-on-surface">{test.name}</p>
-                  </div>
+            {/* Right Column */}
+            <div className="flex flex-col justify-end">
+              <div className="bg-white p-10 flex flex-col gap-6 shadow-sm lg:translate-y-16">
+                <Quote className="w-6 h-6 text-[#c8952a]" fill="currentColor" />
+                <p className="text-[14px] text-[#4f4536] leading-relaxed">
+                  "I am absolutely thrilled with the service I received from their company! They were attentive, responsive, and genuinely cared about meeting my needs. Highly recommend them."
+                </p>
+                <div className="mt-2">
+                  <p className="font-semibold text-[14px] text-[#1b1c1c]">Elena Vance</p>
+                  <p className="text-[12px] text-[#4f4536] mt-0.5">Restaurant Owner</p>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <img src={FINAL_CTA_BG} alt="Spice Background" className="absolute inset-0 w-full h-full object-cover" referrerPolicy="no-referrer" />
-        <div className="absolute inset-0 bg-black/50" />
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative z-10 text-center px-6 text-white"
-        >
-          <h2 className="text-[32px] font-semibold leading-[1.2] text-4xl mb-6">Ready to Find Your Perfect Blend?</h2>
-          <p className="text-lg text-stone-200 mb-8 max-w-xl mx-auto">
-            Browse our online store or visit us in person to experience the heritage of Moroccan flavor.
-          </p>
-          <button className="bg-primary hover:bg-primary-container text-white px-10 py-3 rounded-full text-sm font-bold uppercase tracking-[0.1em] transition-all">
-            Shop Now
-          </button>
-        </motion.div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-background pt-16 pb-8 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center">
-          {/* Row 1: Logo, Links, Socials */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
-            <a href="/" className="flex items-center gap-3">
-              <img src={LOGO_URL} alt="Zafra Marrakech" className="h-10 w-auto" referrerPolicy="no-referrer" />
-            </a>
-            
-            <div className="flex items-center gap-8">
-              {['Home', 'Shop', 'About', 'Contact'].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-semibold uppercase tracking-[0.1em] text-on-surface hover:text-primary transition-colors">
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            <div className="flex gap-4">
-              {[Globe, Mail, Share2].map((Icon, i) => (
-                <button key={i} className="p-2 hover:bg-surface-container rounded-full transition-colors">
-                  <Icon className="w-5 h-5 text-on-surface" strokeWidth={1.5} />
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 2: Copyright */}
-          <div className="text-xs text-on-surface-variant tracking-wider uppercase font-semibold">
+      {/* Footer Minimal */}
+      <footer className="bg-white py-12 border-t border-gray-100">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <a href="/" className="flex items-center">
+            <img src={LOGO_URL} alt="Zafra Marrakech" className="h-10 w-auto" referrerPolicy="no-referrer" />
+          </a>
+          <p className="text-[13px] text-[#4f4536]">
             © 2024 Zafra Marrakech. All rights reserved.
-          </div>
+          </p>
         </div>
       </footer>
     </div>
